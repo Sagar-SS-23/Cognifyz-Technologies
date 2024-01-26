@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Level-1-Task-2</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      background: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190625/ourmid/pngtree-medical-safety-technology-sense-banner-image_261108.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .styledButton {
+      width: 300px;
+      height: 300px;
+      cursor: pointer;
+      border: 4px solid #b40505;
+      border-radius: 15px;
+      font-size: 20px;
+      margin: 20px;
+      transition: background-color 0.3s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .styledButton:hover {
+      filter: brightness(90%);
+    }
+
+    #colorButton {
+      width: 300px;
+      height: 300px;
+      background-color: #f036e6; 
+    }
+
+    #greetingButton {
+      width: 300px;
+      height: 300px;
+      font-size: 24px;
+    }
+
+    #calculator {
+      background: rgba(68, 231, 82, 0.8);
+      padding: 40px;
+      border: 4px solid #1d06a3;
+      border-radius: 20px;
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    input {
+      padding: 15px;
+      margin: 15px;
+      font-size: 20px;
+    }
+
+    #resultBox {
+      margin-top: 20px;
+      padding: 20px;
+      border: 2px solid #d30f0f;
+      border-radius: 15px;
+      font-size: 24px;
+    }
+
+    #resultButton {
+      padding: 20px;
+      cursor: pointer;
+      border: 2px solid #d40f0f;
+      border-radius: 15px;
+      font-size: 20px;
+      margin-top: 20px;
+      background-color: #e3f15f;
+      color: #a10606;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #resultButton:hover {
+      background-color: #51d9eb;
+    }
+
+    h1 {
+      color: #d61212;
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>"Cognifyz Technologies"</h2>
+<h2>"Level-1 : Task-2"</h2>
+
+<div id="colorButton" class="styledButton" onclick="changeColor()"> Color Box</div>
+
+<script>
+  function changeColor() {
+    var button = document.getElementById("colorButton");
+    var colors = ["#3498db", "#e74c3c", "#2ecc71", "#000000", "#ff69b4", "#f1c40f"];
+    var randomColor = colors[Math.floor(Math.random() * colors.length)];
+    button.style.backgroundColor = randomColor;
+  }
+</script>
+
+<div id="greetingButton" class="styledButton" onclick="displayGreeting()"> Greeting Box</div>
+
+<script>
+  function displayGreeting() {
+    var currentDate = new Date();
+    var hour = currentDate.getHours();
+
+    var greeting = "Good ";
+    if (hour < 12) {
+      greeting += "Morning !!";
+    } else if (hour < 18) {
+      greeting += "Afternoon !!";
+    } else {
+      greeting += "Evening !!";
+    }
+
+    alert(greeting + "\nDate: " + currentDate.toDateString() + "\nTime: " + currentDate.toLocaleTimeString());
+  }
+</script>
+
+<div id="calculator">
+  <b><h1>Calculator</h1></b>
+  <input type="text" id="num1" placeholder="Enter Number 1">
+  <input type="text" id="num2" placeholder="Enter Number 2">
+  <button id="resultButton" onclick="addNumbers()">Add</button>
+  <div id="resultBox"></div>
+</div>
+
+<script>
+  function addNumbers() {
+    var num1 = parseFloat(document.getElementById("num1").value);
+    var num2 = parseFloat(document.getElementById("num2").value);
+
+    if (!isNaN(num1) && !isNaN(num2)) {
+      var result = num1 + num2;
+      document.getElementById("resultBox").innerText = "Result: " + result;
+    } else {
+      alert("Please enter valid numbers.");
+    }
+  }
+</script>
+
+</body>
+</html>

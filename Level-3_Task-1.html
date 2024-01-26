@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cars Gallery</title>
+
+    <style>
+      
+      body {
+       font-family: Arial, sans-serif;
+       background-image: url('https://wallpaperaccess.com/full/191531.jpg'); 
+       background-size: cover;
+       margin: 0;
+       padding: 0;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       height: 100vh;
+      }
+
+
+      h1 {
+       text-align: center;
+       height: 40px;
+       color: #3203b4;
+       background-color: #f10505;
+       bottom: 30%;
+      }
+
+      #gallery {
+       display: flex;
+       justify-content: center;
+       flex-wrap: wrap;
+           
+      }
+
+
+      .thumbnail {
+       width: 150px;
+       height: 100px;
+       margin: 15px;
+       cursor: pointer;
+       border: 2px solid #0ed4f7;
+       transition: transform 0.5s, border-color 0.3s;
+      }
+
+      .thumbnail:hover {
+       transform: scale(2.5);
+       border-color: #1bf84b;
+      }
+
+      #slideshow {
+       max-width: 700px;
+       overflow: hidden;
+       margin-top: 20px;
+       border: 5px solid #3917fc;
+      }
+
+      .slide {
+       display: none;
+       width: 100%;
+       animation: fadeIn 1s ease-in-out;
+      }
+
+      img {
+       width: 100%;
+       height: 100%;
+      }
+
+      @keyframes fadeIn {
+        from {
+         opacity: 0;
+        }
+        to {
+         opacity: 1;
+        }
+      } 
+    </style>
+
+  </head>
+
+  <body>
+      
+    <div>
+            
+     <div class="gallery">
+          
+     <img class="thumbnail" src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnN8ZW58MHx8MHx8fDA%3D" alt="Car 1">
+
+     <img class="thumbnail" src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?cs=srgb&dl=pexels-pixabay-210019.jpg&fm=jpg" alt="Car 2"> 
+
+     <img class="thumbnail" src="https://e0.pxfuel.com/wallpapers/941/839/desktop-wallpaper-lamborghini-beautiful-car-wide-beautiful-cars.jpg" alt="Car 3">
+
+     <img class="thumbnail" src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_640.jpg" alt="Car 4">
+
+     <img class="thumbnail" src="https://www.mad4wheels.com/img/free-car-images/mobile/20611/polestar-synergy-concept-2023-thumb.jpg" alt="Car 5">
+
+     <img class="thumbnail" src="https://images.pexels.com/photos/10550012/pexels-photo-10550012.jpeg?cs=srgb&dl=pexels-auto-records-10550012.jpg&fm=jpg" alt="Car 6">
+
+     <img class="thumbnail" src="https://images.squarespace-cdn.com/content/v1/5f7ca9b4bb17060b028086bb/1662759734678-99DS1NLB02E32I5LJWKX/DSC03194-min.jpg" alt="Car 7">
+
+     <img class="thumbnail" src="https://vid.alarabiya.net/images/2023/04/12/2d220739-e6e3-4f4a-86f0-672691659959/2d220739-e6e3-4f4a-86f0-672691659959.jpg?crop=4:3&width=1200" alt="Car 8">
+
+     <img class="thumbnail" src="https://harris-interactive.co.uk/wp-content/uploads/sites/7/2015/07/cars.jpg" alt="Car 9">
+
+     <img class="thumbnail" src="https://cdn.wallpapersafari.com/54/34/j1wL57.jpg" alt="Car 10">
+
+     <img class="thumbnail" src="https://s3-prod-europe.autonews.com/s3fs-public/styles/800x600/public/RIMAC%20NEVERA%206.jpg" alt="Car 11">
+
+     <img class="thumbnail" src="https://www.renderhub.com/squir/bugatti-bolide-concept-2020/bugatti-bolide-concept-2020-02.jpg" alt="Car 12">
+
+     <img class="thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McLaren_P1.jpg/1200px-McLaren_P1.jpg" alt="Car 13">
+
+     <img class="thumbnail" src="https://www.cnet.com/a/img/resize/0e3cba83fb52244aceb258c1bb818b83a47fff26/hub/2022/01/11/5086145d-3505-4e9f-9d84-5b67ee525185/bmw-ix-1080p.jpg?auto=webp&width=1200" alt="Car 14">
+
+      <img class="thumbnail" src="https://cdn.motor1.com/images/mgl/QE3q0/s1/2021-bugatti-chiron-super-sport-300.webp" alt="Car 15">
+
+     <img class="thumbnail" src=" https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?cs=srgb&dl=pexels-mike-bird-3729464.jpg&fm=jpg" alt="Car 16">
+
+     <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQba8HtKoeLKiWpFZFBJZjvW9IeKY2MD20rbUDwhRnkvqpNWdqnoi3Dzyf4m2-NybVrdQk&usqp=CAU" alt="Car 17">
+
+      <img class="thumbnail" src="https://wallpaper-house.com/data/out/8/wallpaper2you_292475.jpg" alt="Car 18">
+
+     <img class="thumbnail" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVke2JgGo-C73xoz5F8zDfaCqy6rvSSwKr9S9KT_Y4Q6PDKtBtssPPYMBTR-j7yrPqea8&usqp=CAU" alt="Car 19">
+
+     <img class="thumbnail" src="https://c4.wallpaperflare.com/wallpaper/825/184/17/car-vehicle-super-car-supercars-wallpaper-preview.jpg" alt="Car 20">
+
+    </div>
+
+    <div id="slideshow">
+
+     <b><h1><marquee> || Cars-Gallery ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||    
+     Cars-Gallery   ||   Cars-Gallery   || Cars-Gallery ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||   Cars-Gallery   ||</marquee></h1></b>
+         
+      <div class="slide"><img src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGNhcnN8ZW58MHx8MHx8fDA%3D" alt="Car 1"></div>
+
+      <div class="slide"><img src="https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg?cs=srgb&dl=pexels-pixabay-210019.jpg&fm=jpg" alt="Car 2"></div>
+
+     <div class="slide"><img src="https://e0.pxfuel.com/wallpapers/941/839/desktop-wallpaper-lamborghini-beautiful-car-wide-beautiful-cars.jpg" alt="Car 3"></div>
+
+     <div class="slide"><img src="https://cdn.pixabay.com/photo/2012/05/29/00/43/car-49278_640.jpg" alt="Car 4"></div>
+
+     <div class="slide"><img src="https://www.mad4wheels.com/img/free-car-images/mobile/20611/polestar-synergy-concept-2023-thumb.jpg" alt="Car 5"></div>
+
+     <div class="slide"><img src="https://images.pexels.com/photos/10550012/pexels-photo-10550012.jpeg?cs=srgb&dl=pexels-auto-records-10550012.jpg&fm=jpg" alt="Car 6"></div>
+
+     <div class="slide"><img src="https://images.squarespace-cdn.com/content/v1/5f7ca9b4bb17060b028086bb/1662759734678-99DS1NLB02E32I5LJWKX/DSC03194-min.jpg" alt="Car 7"></div>
+
+     <div class="slide"><img src="https://vid.alarabiya.net/images/2023/04/12/2d220739-e6e3-4f4a-86f0-672691659959/2d220739-e6e3-4f4a-86f0-672691659959.jpg?crop=4:3&width=1200" alt="Car 8"></div>
+
+     <div class="slide"><img src="https://harris-interactive.co.uk/wp-content/uploads/sites/7/2015/07/cars.jpg" alt="Car 9"></div>
+
+     <div class="slide"><img src="https://cdn.wallpapersafari.com/54/34/j1wL57.jpg" alt="Car 10"></div>
+
+     <div class="slide"><img src="https://s3-prod-europe.autonews.com/s3fs-public/styles/800x600/public/RIMAC%20NEVERA%206.jpg" alt="Car 11"></div>
+
+     <div class="slide"><img src="https://www.renderhub.com/squir/bugatti-bolide-concept-2020/bugatti-bolide-concept-2020-02.jpg" alt="Car 12"></div>
+
+     <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/McLaren_P1.jpg/1200px-McLaren_P1.jpg" alt="Car 13"></div>
+
+     <div class="slide"><img src="https://www.cnet.com/a/img/resize/0e3cba83fb52244aceb258c1bb818b83a47fff26/hub/2022/01/11/5086145d-3505-4e9f-9d84-5b67ee525185/bmw-ix-1080p.jpg?auto=webp&width=1200" alt="Car 14"></div>
+
+     <div class="slide"><img src="https://cdn.motor1.com/images/mgl/QE3q0/s1/2021-bugatti-chiron-super-sport-300.webp" alt="Car 15"></div>
+       
+     <div class="slide"><img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg?cs=srgb&dl=pexels-mike-bird-3729464.jpg&fm=jpg" alt="Car 16"></div>
+       
+     <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQba8HtKoeLKiWpFZFBJZjvW9IeKY2MD20rbUDwhRnkvqpNWdqnoi3Dzyf4m2-NybVrdQk&usqp=CAU" alt="Car 17"></div>
+       
+     <div class="slide"><img src="https://wallpaper-house.com/data/out/8/wallpaper2you_292475.jpg" alt="Car 18"></div>
+       
+     <div class="slide"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVke2JgGo-C73xoz5F8zDfaCqy6rvSSwKr9S9KT_Y4Q6PDKtBtssPPYMBTR-j7yrPqea8&usqp=CAU" alt="Car 19"></div>
+       
+     <div class="slide"><img src="https://c4.wallpaperflare.com/wallpaper/825/184/17/car-vehicle-super-car-supercars-wallpaper-preview.jpg" alt="Car 20"></div>
+
+    </div>
+
+    <script> 
+
+     const slides = document.querySelectorAll('.slide');
+      let currentIndex = 0;
+
+      function showSlide(index) 
+       {  slides.forEach((slide, i) => {
+       slide.style.display = i === index ? 'block' : 'none';
+       });
+      }  
+
+      function nextSlide()
+       {  currentIndex = (currentIndex + 1) % slides.length;
+       showSlide(currentIndex);
+      }
+      
+      setInterval(nextSlide, 2000);    
+        document.getElementById('gallery').addEventListener('click', (event) => {
+  
+        if (event.target.classList.contains('thumbnail'))
+         {
+         currentIndex = Array.from(event.target.parentNode.children).indexOf(event.target);
+         showSlide(currentIndex);
+        }
+
+      });
+        
+    </script>
+
+  </body>
+    
+</html>    
+    
+
+
+
+
